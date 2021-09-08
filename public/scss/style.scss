@@ -1,0 +1,236 @@
+* {
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px auto;
+    min-height: 100vh;
+    // Home style 
+    .title {
+        font-size: 3rem;
+        text-transform: capitalize;
+        text-align: center;
+        padding: 20px 10px;
+        font-weight: 700;
+        border-bottom: 1px solid #2222;
+        align-self: baseline;
+    }
+    .content {
+        width: 80%;
+        margin: 0 auto;
+        .shortener {
+            padding: 20px 10px;
+            .shortener-title {
+                text-align: center;
+                font-size: 2rem;
+                text-transform: capitalize;
+                font-weight: 400;
+            }
+            .form {
+                display: flex;
+                justify-content: center;
+                padding: 20px 0px;
+                max-width: 600px;
+                margin: auto;
+                input {
+                    width: 70%;
+                    padding: 5px 0px;
+                    text-indent: 10px;
+                    border-radius: 3px;
+                    border: 1px solid #4444;
+                    font-size: 1.2rem;
+                }
+                button {
+                    padding: 10px 20px;
+                    border: 0px;
+                    text-transform: capitalize;
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    background: crimson;
+                    color: white;
+                    cursor: pointer;
+                    transition: .3s ease-in-out;
+                    &:hover {
+                        background: rgb(243, 2, 50);
+                    }
+                }
+            }
+        }
+        .about {
+            padding: 0px 20px;
+            .card {
+                max-width: 600px;
+                margin: 50px auto;
+                .heading {
+                    font-size: 1.5rem;
+                    text-transform: capitalize;
+                    color: crimson;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    padding: 10px 0px;
+                }
+                .paragraph {
+                    font-size: 1rem;
+                    color: #222;
+                    line-height: 1.8rem;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+    footer {
+        background: crimson;
+        padding: 20px 10px;
+        align-self: flex-end;
+        p {
+            text-transform: capitalize;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    }
+    // Shorten style
+    .url-details {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+        .heading {
+            text-transform: capitalize;
+            font-weight: 700;
+            color: crimson;
+            font-size: 2rem;
+            padding: 10px 0px;
+        }
+        .paragraph {
+            margin: auto;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            line-height: 1.8rem;
+        }
+        ul {
+            padding: 20px 0px;
+            list-style: none;
+            li {
+                font-size: 1rem;
+                line-height: 1.8rem;
+                padding: 10px 0px;
+                word-wrap: break-word;
+                input {
+                    padding: 5px 0px;
+                    text-indent: 5px;
+                    border-radius: 3px;
+                    border: 1px solid #4444;
+                    width: 60%;
+                    max-width: 500px;
+                    font-size: 1.2rem;
+                }
+                button {
+                    background: crimson;
+                    color: white;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    border: 0px;
+                    border-radius: 3px;
+                    padding: 5px 20px;
+                    cursor: pointer;
+                }
+                a {
+                    color: crimson;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    // Tracker style 
+    .tracker {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+        .heading {
+            text-transform: capitalize;
+            font-weight: 700;
+            color: crimson;
+            font-size: 2rem;
+            padding: 10px 0px;
+        }
+        .paragraph {
+            margin: auto;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            line-height: 1.8rem;
+            padding: 10px 0px;
+        }
+        .counter {
+            font-size: 3rem;
+            border-radius: 3px;
+            border: 1px solid #4444;
+            display: table;
+            padding: 10px 20px;
+            color: crimson;
+        }
+        div {
+            padding: 40px 0px;
+            a {
+                background: crimson;
+                font-size: 1.2rem;
+                text-transform: capitalize;
+                padding: 10px 20px;
+                border: 0;
+                border-radius: 3px;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:670px) {
+    .container {
+        .title {
+            font-size: 2.5rem;
+        }
+        .content {
+            width: 100%;
+            .shortener {
+                .shortener-title {
+                    font-size: 1.8rem;
+                }
+                .form {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:520px) {
+    .container {
+        .title {
+            font-size: 2.5rem;
+        }
+        .content {
+            width: 100%;
+            .shortener {
+                .shortener-title {
+                    font-size: 1.8rem;
+                }
+                .form {
+                    max-width: 100%;
+                    width: 100%;
+                    button {
+                        font-size: 1rem;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}
