@@ -11,10 +11,14 @@ app.use("/", require("./routes/getRoutes"));
 app.use("/api/", require("./routes/postRoutes"));
 // Port
 const PORT = process.env.PORT || 8080;
-// Connection to DB
-require("./db/conection").then(() => {
-    // Listening to server
-    app.listen(PORT, () => {
-        console.log(`Server in running on Port ${PORT}`);
-    });
-});
+// Connection to DB & Listening to server
+(async() => {
+    try {
+        await require("./db/conection");
+        app.listen(PORT, () => {
+            console.log(`Server in running on Port ${PORT}`);
+        });
+    } catch (e) {
+        console.log(e);
+    }
+})();

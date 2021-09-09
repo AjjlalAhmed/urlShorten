@@ -27,4 +27,5 @@ const urlSchema = new Schema({
 });
 // Exporting schema
 const url = mongoose.model("url", urlSchema);
+
 module.exports = url;
