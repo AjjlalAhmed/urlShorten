@@ -7,7 +7,7 @@ User enters a valid URL into the form. If the format is valid, the webpage will 
 
 #How to use
 After cloning the repo:
-- cd dir\
+- cd dir
 - npm install\
 To protect database details, I used npm dotenv and a .env file. Please add .env file and paste your DBURI URI BASEURL.
 
